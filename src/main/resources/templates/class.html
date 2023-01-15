@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Add a class</h1>
+
+<div>
+<form th:action="@{/addClass}" method="post" th:object="${eazyclass}">
+<div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Class" name="classname">
+   <input type="submit">
+  </div>
+</form>
+</div>
+</body>
+</html>

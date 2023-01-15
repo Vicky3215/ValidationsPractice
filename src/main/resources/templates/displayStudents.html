@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<a th:href="@{/addStudent}">Add Student</a>
+<table>
+<tr th:each="student: ${eazyclass.login}">
+    <td th:text="${student.practice_id}" />
+    <td th:text="${student.email}" />
+     <td th:text="${student.classs}" />
+     <td><a th:href="@{/deleteStudent(id=${student.practice_id})}">Delete</a></td>
+</tr>
+</table>
+
+
+</body>
+</html>

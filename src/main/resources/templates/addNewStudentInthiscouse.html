@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Add New Student</h1>
+<form th:action="@{/addNewStudentInthiscouse}" method="post" th:object="${login}">
+Please put student email id<input type="text" name="email"/>
+<input type="submit"/>
+</form>
+</body>
+</html>

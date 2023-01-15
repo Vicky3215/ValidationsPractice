@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>View Students</h1>
+
+<table>
+            <tr>
+                <th >Student ID</th>
+                <th >Student Name</th>
+            </tr>
+            </thead>
+<tr th:each="student: ${courses.login}">
+    <td th:text="${student.practice_id}" />
+    <td th:text="${student.email}" />
+    <td><a th:href="@{/deleteStudentfomthisCourse(id=${student.practice_id})}">Delete</a></td>
+</tr>
+</table>
+<a th:href="@{/addNewStudentInthiscouse}">Want to Add A Student???</a>
+</body>
+</html>

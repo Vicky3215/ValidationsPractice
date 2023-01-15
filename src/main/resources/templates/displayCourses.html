@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>DISPLAY CLASSES</h1>
+<table>
+            <tr>
+                <th >Course ID</th>
+                <th >Course Name</th>
+                <th >Course Price</th>
+            </tr>
+            </thead>
+<tr th:each="student: ${classes}">
+    <td th:text="${student.classid}" />
+    <td th:text="${student.classname}" />
+   <td> <a th:href="@{/displayStudents(classid=${student.classid})}">View</a></td>
+   <td> <a th:href="@{/deleteClass(classid=${student.classid})}">Delete class</a></td>
+</tr>
+</table>
+<a th:href="@{/addClasss}">Add a New Class?</a>
+
+</body>
+</html>
